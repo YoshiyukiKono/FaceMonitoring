@@ -33,6 +33,10 @@ https://qiita.com/yshi12/items/9502c6232e96d7dfa29d
 
 https://www.mitsue.co.jp/knowledge/blog/frontend/201806/29_1525.html
 
+PythonのFlaskでのrender_templateで画像ファイルの表示方法
+
+https://teratail.com/questions/89341
+
 CDSW (Web UI等)
 
 https://www.cloudera.com/documentation/data-science-workbench/1-3-x/PDF/cloudera-cdsw.pdf
