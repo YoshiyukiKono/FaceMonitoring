@@ -1,6 +1,15 @@
 # Edge
-
+## Abstruct
 Edge(Camera) > MiNiFi > NiFi > OS File System
+
+### MiNiFi Flow
+1. ExecuteProcess
+1. GetFile -> To: Image From MiNiFi -> NiFi Flow
+
+### NiFi Flow
+1. Image From MiNiFi
+1. PutFile
+1. (Optional) PutHDFS (or Put HBase?)
 
 ## Environment Preparation
 
@@ -9,6 +18,8 @@ Edge(Camera) > MiNiFi > NiFi > OS File System
 #### OS Install
 
 #### Device Setup
+
+* Raspberry Pi Camera Module V2
 
 #### MiNiFi Setup
 
@@ -61,6 +72,14 @@ WantedBy=multi-user.target
 ```
 
 ## Reference
+
+### Camera
+
+PythonでRaspberry Pi カメラを制御する
+
+https://iotdiyclub.net/raspberry-pi-camera-python-1/
+
+### Sensor
 
 MiNiFiでセンサーデータを取得し、NiFiに転送してHDFS、Hiveに書き込む
 
