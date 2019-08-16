@@ -66,6 +66,14 @@ MiNiFiでセンサーデータを取得し、NiFiに転送してHDFS、Hiveに�
 
 https://viewse.blogspot.com/2019/06/minifinifihdfshive_5.html
 
+ラズベリーパイで温度・湿度・気圧をまとめて取得！AE-BME280でIC2通信
+
+https://deviceplus.jp/hobby/raspberrypi_entry_039/
+
+ラズパイ+BME280でIoT環境センサー構築(その1)
+
+https://qiita.com/hawk777/items/2b910a81df480268e07e
+
 
 pythonをデーモン化するメモ
 
