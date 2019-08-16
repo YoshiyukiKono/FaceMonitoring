@@ -27,7 +27,7 @@ ln -s minifi-0.6.0.3.3.1.0-10 minifi
 ln -s minifi-toolkit-0.6.0.3.3.1.0-10 tool_minifi
 
 #MiNiFiをインストールする
-./minifi/bin/minifi.sh install
+sudo ./minifi/bin/minifi.sh install
 #必要に応じてリモートNiFiホストを/etc/hostsに追加する
 ```
 
