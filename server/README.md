@@ -10,6 +10,20 @@ pip install opencv-contrib-python
 git clone https://github.com/opencv/opencv.git
 ```
 
+```
+pip install pillow
+```
+
+```
+mkdir images
+```
+
+## Execution
+
+```
+python server.py
+```
+
 ## Reference
 
 openCV顔検出の仕組と実践
