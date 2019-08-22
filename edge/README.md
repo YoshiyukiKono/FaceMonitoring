@@ -2,6 +2,17 @@
 ## Abstruct
 Edge(Camera) > MiNiFi > NiFi > OS File System
 
+### Camera
+
+#### Check
+```
+vcgencmd get_camera
+```
+
+```
+raspistill -o ./picture/camera.jpg
+```
+
 ### MiNiFi Flow
 1. ExecuteProcess
 1. GetFile -> To: Image From MiNiFi -> NiFi Flow
