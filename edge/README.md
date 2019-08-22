@@ -13,6 +13,27 @@ vcgencmd get_camera
 raspistill -o ./picture/camera.jpg
 ```
 
+#### Daemon
+/usr/lib/systemd/system/cameradaemon.service
+```
+[Unit]
+Description=CameraDaemon
+
+[Service]
+ExecStart=/home/pi/camera_daemon.py
+Restart=always
+Type=forking
+PIDFile=/var/run/camera_daemon.pid
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```
+sudo systemctl daemon-reload
+sudo systemctl start pythondaemon.service
+```
+
 ### MiNiFi Flow
 1. ExecuteProcess
 1. GetFile -> To: Image From MiNiFi -> NiFi Flow
