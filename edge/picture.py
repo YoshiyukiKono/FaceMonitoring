@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import shutil
 import time
 import picamera
  
@@ -9,5 +10,5 @@ with picamera.PiCamera() as camera:
  # Camera warm-up time
  time.sleep(2)
  while True:
-  time.sleep(2)
-  camera.capture('my_picture.jpg')
+  camera.capture('./picture/picture.jpg')
+  shutil.copy('./picture/picture.jpg', './iot/picture.jpg')
