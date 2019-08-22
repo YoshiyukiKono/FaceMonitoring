@@ -20,7 +20,7 @@ raspistill -o ./picture/camera.jpg
 Description=CameraDaemon
 
 [Service]
-ExecStart=/home/pi/camera_daemon.py
+ExecStart=/opt/camera_daemon.py
 Restart=always
 Type=forking
 PIDFile=/var/run/camera_daemon.pid
@@ -31,7 +31,14 @@ WantedBy=multi-user.target
 
 ```
 sudo systemctl daemon-reload
-sudo systemctl start pythondaemon.service
+
+sudo systemctl list-unit-files --type=service | grep camera
+
+sudo systemctl enable cameradaemon
+sudo systemctl start cameradaemon
+sudo systemctl status cameradaemon
+
+sudo systemctl disable cameradaemon
 ```
 
 ### MiNiFi Flow
