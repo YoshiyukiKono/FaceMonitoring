@@ -3,6 +3,8 @@
 import time
 import os
 import sys
+import shutil
+import picamera
 
 def main_unit():
     with picamera.PiCamera() as camera:
@@ -11,8 +13,8 @@ def main_unit():
         # Camera warm-up time
         time.sleep(2)
         while True:
-            camera.capture('./picture/picture.jpg')
-            shutil.copy('./picture/picture.jpg', './iot/picture.jpg')
+            camera.capture('/home/pi/picture/picture.jpg')
+            shutil.copy('/home/pi/picture/picture.jpg', '/home/pi/iot/picture.jpg')
 
 def daemonize():
     pid = os.fork()
@@ -27,3 +29,4 @@ def daemonize():
 if __name__ == '__main__':
     while True:
         daemonize()
+
