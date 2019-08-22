@@ -11,7 +11,10 @@ git clone https://github.com/opencv/opencv.git
 ```
 
 ```
-pip install pillow
+sudo pip install flask
+sudo pip install pillow
+sudo pip install numpy
+sudo pip install opencv-python
 ```
 
 ```
