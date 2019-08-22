@@ -30,6 +30,14 @@ ExecStop=/opt/nifi-1.8.0/bin/nifi.sh stop
 [Install]
 WantedBy=multi-user.target
 ```
+### NiFi Flow
+#### NiFi
+'Input Port' to 'PutFile' Processor
+#### MiNiFi
+'GetFile' Processor to 'Remote Process Group'
+
+Note: 'Remote Input Host' (nifi.remote.input.host) must be the same as the host of URLs for 'Remote Process Group'
+
 ## Reference
 
 MiNiFiでRaspberryPiのカメラを制御し、写真をNiFiにアップロード、Hadoopに保存
