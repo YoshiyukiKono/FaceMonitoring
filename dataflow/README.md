@@ -30,3 +30,12 @@ ExecStop=/opt/nifi-1.8.0/bin/nifi.sh stop
 [Install]
 WantedBy=multi-user.target
 ```
+## Reference
+
+MiNiFiでRaspberryPiのカメラを制御し、写真をNiFiにアップロード、Hadoopに保存
+
+https://qiita.com/zz22394/items/de66b286748831042fa1
+
+Using MiniFi to read data from a Sense HAT on a Raspberry Pi 3
+
+https://community.cloudera.com/t5/Community-Articles/Using-MiniFi-to-read-data-from-a-Sense-HAT-on-a-Raspberry-Pi/ta-p/244536
