@@ -25,6 +25,23 @@ def random_str(n):
 
 def load_image():
     #filename = "./images/test.png"
+    filename = "/tmp/picture.jpg"
+    try:
+        img = cv2.imread(filename)
+        new_img = face(img)
+        new_img = new_img[:, :, ::-1]
+        pil_img = Image.fromarray(new_img)
+        binary = BytesIO()
+        pil_img.save(binary,"JPEG")
+
+        b64str = base64.b64encode(binary.getvalue()).decode("utf-8")
+        b64data = "data:image/jpg;base64,{}".format(b64str)
+        return b64data
+    except:
+        return ""
+"""
+def load_image():
+    #filename = "./images/test.png"
     filename = "./images/download.jpg"
     img = cv2.imread(filename)
     new_img = face(img)
@@ -46,6 +63,7 @@ def load_image():
     b64str = base64.b64encode(binary.getvalue()).decode("utf-8")
     b64data = "data:image/jpg;base64,{}".format(b64str)
     return b64data
+"""
 
 @app.route('/')
 def index():
