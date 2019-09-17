@@ -1,6 +1,7 @@
 import cv2
 
-cascade_path = "./models/haarcascade_frontalface_default.xml"
+#cascade_path = "./models/haarcascade_frontalface_default.xml"
+cascade_path = "/home/centos/flask/FaceMonitoring/server/models/haarcascade_frontalface_default.xml"
 
 def canny(image):
     return cv2.Canny(image, 100, 200)
