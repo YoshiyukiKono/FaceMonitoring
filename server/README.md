@@ -24,7 +24,14 @@ mkdir images
 ## Execution
 
 ```
-python server.py
+nohup python server.py 2>&1 &
+```
+
+check
+```
+fg
+[Ctl+z]
+bg
 ```
 
 ## Reference
