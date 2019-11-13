@@ -3,8 +3,8 @@
 Edge(Camera) > MiNiFi > NiFi > OS File System
 
 ### Prerequisite
-- ABOX Raspberry Pi 3 Model b+
-- ５ Megapixel Raspberry Pi Camera
+- Raspberry Pi 3 Model b+
+- Raspberry Pi Camera (５ Megapixel)
 
 #### Check
 ```
@@ -68,17 +68,14 @@ sudo systemctl disable cameradaemon
 sudo su -
 cd /home/pi
 
-#HortonworksのサイトからMiNiFiのtarファイルをダウンロードする
 curl -O http://public-repo-1.hortonworks.com/HDF/3.3.1.0/minifi-0.6.0.3.3.1.0-10-bin.tar.gz
 curl -O http://public-repo-1.hortonworks.com/HDF/3.3.1.0/minifi-toolkit-0.6.0.3.3.1.0-10-bin.tar.gz
 
-#ファイル解答し、シンボリックリンクを作成する
 tar -zxvf minifi-0.6.0.3.3.1.0-10-bin.tar.gz
 tar -zxvf minifi-toolkit-0.6.0.3.3.1.0-10-bin.tar.gz
 ln -s minifi-0.6.0.3.3.1.0-10 minifi
 ln -s minifi-toolkit-0.6.0.3.3.1.0-10 tool_minifi
 
-#MiNiFiをインストールする
 sudo ./minifi/bin/minifi.sh install
 #必要に応じてリモートNiFiホストを/etc/hostsに追加する
 ```
