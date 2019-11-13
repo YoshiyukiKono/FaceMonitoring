@@ -2,7 +2,9 @@
 ## Abstruct
 Edge(Camera) > MiNiFi > NiFi > OS File System
 
-### Camera
+### Prerequisite
+- ABOX Raspberry Pi 3 Model b+
+- ５ Megapixel Raspberry Pi Camera
 
 #### Check
 ```
